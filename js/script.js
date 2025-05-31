@@ -48,7 +48,10 @@ if (form) {
                 .insert([submission])
                 .select();
             
-            if (error) throw error;
+            if (error) {
+                console.error('Insert error:', error);
+                throw error;
+            }
 
             const reportId = data[0].id;
             console.log('Report inserted, ID:', reportId);
@@ -68,10 +71,11 @@ if (form) {
                 fileUrl = urlData.publicUrl;
                 console.log('File uploaded, URL:', fileUrl);
 
-                await supabase
+                const { error: updateError } = await supabase
                     .from('reports')
                     .update({ file_url: fileUrl })
                     .eq('id', reportId);
+                if (updateError) throw updateError;
             }
 
             alert('Report submitted successfully!');
