@@ -540,3 +540,127 @@ footer {
         height: 40px;
     }
 }
+/* Report Section */
+.report-section {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 50px;
+    background: linear-gradient(135deg, var(--kenya-white) 0%, #f5f5f5 100%);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    position: relative;
+    z-index: 10;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.report-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: var(--kenya-red);
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.report-section h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, var(--kenya-black), var(--kenya-red), var(--kenya-green));
+    border-radius: 2px;
+}
+
+.report-section h3 {
+    font-size: 1.8rem;
+    margin: 40px 0 20px;
+    color: var(--kenya-black);
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background: #fafafa;
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--kenya-red);
+    box-shadow: 0 0 10px rgba(187, 0, 0, 0.2);
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.report-display {
+    margin-top: 40px;
+}
+
+.report-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid var(--kenya-red);
+}
+
+.report-card p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.report-card a {
+    color: var(--kenya-red);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.report-card a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .report-section {
+        padding: 30px 20px;
+    }
+
+    .report-section h2 {
+        font-size: 2rem;
+    }
+
+    .report-section h3 {
+        font-size: 1.5rem;
+    }
+}
