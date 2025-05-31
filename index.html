@@ -6,6 +6,8 @@
     <title>Reject Finance Bill 2025</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Supabase JavaScript Client -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
     <header>
@@ -34,6 +36,47 @@
         </div>
     </section>
 
+    <!-- Report Abductions Section -->
+    <section class="report-section">
+        <div class="container">
+            <h2>Report Abductions/Unlawful Arrests</h2>
+            <div class="report-form">
+                <form id="reportForm">
+                    <div class="form-group">
+                        <label for="name">Name (Optional):</label>
+                        <input type="text" id="name" placeholder="Leave blank for anonymity">
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date of Incident:</label>
+                        <input type="date" id="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location:</label>
+                        <input type="text" id="location" placeholder="Enter location" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description:</label>
+                        <textarea id="description" placeholder="Describe the incident" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="file">Upload Evidence (Image/PDF):</label>
+                        <input type="file" id="file" accept="image/*,application/pdf">
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="anonymous"> Submit Anonymously
+                        </label>
+                    </div>
+                    <button type="submit" class="action-btn"><span>Submit Report</span></button>
+                </form>
+            </div>
+            <div class="report-display">
+                <h3>Reported Incidents</h3>
+                <div id="reportList"></div>
+            </div>
+        </div>
+    </section>
+
     <div class="container">
         <div class="language-buttons">
             <a href="english.html" class="btn btn-english">
@@ -51,8 +94,11 @@
                 <img src="images/kenya-coat-of-arms.png" alt="Kenya Coat of Arms">
             </div>
             <p>Standing for a Better Kenya</p>
-            <p class="copyright">&copy; 2025 Reject Finance Bill Movement. All rights reserved.</p>
+            <p class="copyright">© 2025 Reject Finance Bill Movement. All rights reserved.</p>
+            <p><a href="privacy.html">Privacy Policy</a></p>
         </div>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
