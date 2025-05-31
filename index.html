@@ -6,7 +6,6 @@
     <title>Reject Finance Bill 2025</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Supabase JavaScript Client -->
     <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
 </head>
 <body>
@@ -40,12 +39,11 @@
         </div>
     </section>
 
-    <!-- Report Abductions Section -->
     <section class="report-section">
         <div class="container">
             <h2>Report Abductions/Unlawful Arrests</h2>
             <div class="report-form">
-                <form id="reportForm">
+                <form id="reportForm" onsubmit="return false;">
                     <div class="form-group">
                         <label for="name">Name (Optional):</label>
                         <input type="text" id="name" placeholder="Leave blank for anonymity">
