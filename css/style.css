@@ -69,21 +69,29 @@ header {
 }
 
 .logo {
-    width: 70px;
-    height: 70px;
-    background: linear-gradient(135deg, var(--kenya-red) 0%, var(--kenya-green) 100%);
+    width: 80px; /* Slightly larger for better visibility */
+    height: 80px; /* Same as width for a perfect circle */
+    background: var(--kenya-white); /* White background for contrast */
     border-radius: 50%;
+    border: 3px solid var(--kenya-red); /* Thin red border to match theme */
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 0 25px rgba(187, 0, 0, 0.4);
-    animation: pulse 2s infinite;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Softer shadow */
+    transition: var(--transition); /* Use existing transition variable */
 }
 
 .logo img {
-    width: 50px;
-    height: 50px;
-    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+    width: 70%; /* Relative size to fit within the circle */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure no distortion */
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3)); /* Adjusted shadow for subtlety */
+}
+
+/* Hover effect for header logo */
+.logo:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 0 20px rgba(187, 0, 0, 0.4); /* Red-tinted shadow on hover */
 }
 
 .logo-text {
@@ -411,20 +419,30 @@ footer {
 }
 
 .footer-logo {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 20px;
-    background: linear-gradient(135deg, var(--kenya-red) 0%, var(--kenya-green) 100%);
+    width: 70px; /* Slightly smaller than header for balance */
+    height: 70px;
+    background: var(--kenya-white); /* White background */
     border-radius: 50%;
+    border: 3px solid var(--kenya-red); /* Matching red border */
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 0 25px rgba(187, 0, 0, 0.4);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    margin: 0 auto 20px;
+    transition: var(--transition);
 }
 
 .footer-logo img {
-    width: 50px;
-    height: 50px;
+    width: 70%;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+}
+
+/* Hover effect for footer logo */
+.footer-logo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(187, 0, 0, 0.4);
 }
 
 .copyright {
@@ -531,15 +549,26 @@ footer {
     }
     
     .logo {
-        width: 60px;
+        width: 60px; /* Reduced size for small screens */
         height: 60px;
     }
     
     .logo img {
-        width: 40px;
-        height: 40px;
+        width: 70%; /* Maintain relative sizing */
+        height: auto;
+    }
+
+    .footer-logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .footer-logo img {
+        width: 70%;
+        height: auto;
     }
 }
+
 /* Report Section */
 .report-section {
     max-width: 900px;
