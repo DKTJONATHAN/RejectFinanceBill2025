@@ -55,11 +55,11 @@
     </div>
 </div> 
 
-   <section class="report-section">
+  <section class="report-section">
     <div class="container">
         <h2>Report Abductions/Unlawful Arrests</h2>
         <div class="report-form">
-            <form id="reportForm" action="YOUR_GOOGLE_APPS_SCRIPT_URL" method="POST">
+            <form id="reportForm" action="https://script.google.com/macros/s/AKfycbwExsTWLhfeCs6MMiUfqAHEbwjtcC1fkehAql-ZDecSq40VEov1GjaH03250zQafBoR8A/exec" method="POST">
                 <div class="form-group">
                     <label for="name">Name (Optional):</label>
                     <input type="text" id="name" name="name" placeholder="Leave blank for anonymity">
@@ -96,6 +96,13 @@
             <div id="reportList"></div>
         </div>
     </div>
+</section>
+<div id="reportPopup" class="popup" style="display: none;">
+    <div class="popup-content">
+        <span class="popup-close" onclick="closePopup('reportPopup')">×</span>
+        <p id="reportPopupMessage"></p>
+    </div>
+</div>
 </section>
 <div id="reportPopup" class="popup" style="display: none;">
     <div class="popup-content">
