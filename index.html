@@ -55,44 +55,54 @@
     </div>
 </div> 
 
-    <section class="report-section">
-        <div class="container">
-            <h2>Report Abductions/Unlawful Arrests</h2>
-            <div class="report-form">
-                <form id="reportForm" onsubmit="return false;">
-                    <div class="form-group">
-                        <label for="name">Name (Optional):</label>
-                        <input type="text" id="name" placeholder="Leave blank for anonymity">
-                    </div>
-                    <div class="form-group">
-                        <label for="date">Date of Incident:</label>
-                        <input type="date" id="date" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="location">Location:</label>
-                        <input type="text" id="location" placeholder="Enter location" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="description">Description:</label>
-                        <textarea id="description" placeholder="Describe the incident" required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="file">Upload Evidence (Image/PDF):</label>
-                        <input type="file" id="file" accept="image/*,application/pdf">
-                    </div>
-                    <div class="form-group">
-                        <label>
-                            <input type="checkbox" id="anonymous"> Submit Anonymously
-                        </label>
-                    </div>
-                    <button type="submit" class="action-btn"><span>Submit Report</span></button>
-                </form>
-            </div>
-            <div class="report-display">
-                <h3>Reported Incidents</h3>
-                <div id="reportList"></div>
-            </div>
+   <section class="report-section">
+    <div class="container">
+        <h2>Report Abductions/Unlawful Arrests</h2>
+        <div class="report-form">
+            <form id="reportForm" action="YOUR_GOOGLE_APPS_SCRIPT_URL" method="POST">
+                <div class="form-group">
+                    <label for="name">Name (Optional):</label>
+                    <input type="text" id="name" name="name" placeholder="Leave blank for anonymity">
+                </div>
+                <div class="form-group">
+                    <label for="date">Date of Incident:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location" placeholder="Enter location" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" placeholder="Describe the incident" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="file">Upload Evidence (Image/PDF):</label>
+                    <input type="file" id="file" name="evidence_url" accept="image/*,application/pdf">
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="anonymous" name="anonymous"> Submit Anonymously
+                    </label>
+                </div>
+                <input type="hidden" name="form-name" value="report">
+                <input type="hidden" name="type" value="New Report Alert!">
+                <input type="hidden" name="created_at" id="created_at">
+                <button type="submit" class="action-btn"><span>Submit Report</span></button>
+            </form>
         </div>
+        <div class="report-display">
+            <h3>Reported Incidents</h3>
+            <div id="reportList"></div>
+        </div>
+    </div>
+</section>
+<div id="reportPopup" class="popup" style="display: none;">
+    <div class="popup-content">
+        <span class="popup-close" onclick="closePopup('reportPopup')">×</span>
+        <p id="reportPopupMessage"></p>
+    </div>
+</div>
     </section>
 
     <footer>
