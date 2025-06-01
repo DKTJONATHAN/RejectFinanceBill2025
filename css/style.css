@@ -69,29 +69,30 @@ header {
 }
 
 .logo {
-    width: 80px; /* Slightly larger for better visibility */
-    height: 80px; /* Same as width for a perfect circle */
-    background: var(--kenya-white); /* White background for contrast */
-    border-radius: 50%;
-    border: 3px solid var(--kenya-red); /* Thin red border to match theme */
+    width: 80px;
+    height: 80px;
+    background: var(--kenya-white);
+    border-radius: 50% !important; /* Force circular shape */
+    border: 3px solid var(--kenya-red);
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Softer shadow */
-    transition: var(--transition); /* Use existing transition variable */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+    overflow: hidden; /* Ensure no overflow breaks the circle */
 }
 
 .logo img {
-    width: 70%; /* Relative size to fit within the circle */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Ensure no distortion */
-    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3)); /* Adjusted shadow for subtlety */
+    width: 70%;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
 }
 
 /* Hover effect for header logo */
 .logo:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
-    box-shadow: 0 0 20px rgba(187, 0, 0, 0.4); /* Red-tinted shadow on hover */
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(187, 0, 0, 0.4);
 }
 
 .logo-text {
@@ -419,11 +420,11 @@ footer {
 }
 
 .footer-logo {
-    width: 70px; /* Slightly smaller than header for balance */
+    width: 70px;
     height: 70px;
-    background: var(--kenya-white); /* White background */
+    background: var(--kenya-white);
     border-radius: 50%;
-    border: 3px solid var(--kenya-red); /* Matching red border */
+    border: 3px solid var(--kenya-red);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -549,12 +550,12 @@ footer {
     }
     
     .logo {
-        width: 60px; /* Reduced size for small screens */
+        width: 60px;
         height: 60px;
     }
     
     .logo img {
-        width: 70%; /* Maintain relative sizing */
+        width: 70%;
         height: auto;
     }
 
