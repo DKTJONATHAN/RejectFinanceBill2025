@@ -762,7 +762,7 @@ footer {
 .tweet-section {
   max-width: 900px;
   margin: 60px auto;
-  padding: 50px;
+  padding: 50px 20px; /* Reduced side padding to give more room for inputs */
   background: linear-gradient(135deg, var(--kenya-white) 0%, #f5f5f5 100%);
   border-radius: 20px;
   box-shadow: var(--shadow);
@@ -795,6 +795,7 @@ footer {
 
 .tweet-section .form-group {
   margin-bottom: 20px;
+  width: 100%; /* Ensure form-group stays within container */
 }
 
 .tweet-section .form-group label {
@@ -806,12 +807,14 @@ footer {
 }
 
 .tweet-section .form-group input {
-  width: 100%;
+  width: 100%; /* Full width within parent */
+  max-width: 100%; /* Prevent overflow */
   padding: 12px;
   font-size: 1rem;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   background: #fafafa;
+  box-sizing: border-box; /* Ensure padding is included in width */
   transition: var(--transition);
 }
 
@@ -856,7 +859,7 @@ footer {
   text-transform: uppercase;
   letter-spacing: 1px;
   background: linear-gradient(45deg, var(--kenya-black) 0%, var(--kenya-red) 50%, var(--kenya-green) 100%);
-  margin: 0 auto;
+  margin: 20px auto 0; /* Center button with top margin */
 }
 
 .tweet-section .action-btn::before {
@@ -891,7 +894,7 @@ footer {
 
 @media (max-width: 768px) {
   .tweet-section {
-    padding: 30px 20px;
+    padding: 30px 15px; /* Further reduced padding for smaller screens */
   }
 
   .tweet-section h3 {
