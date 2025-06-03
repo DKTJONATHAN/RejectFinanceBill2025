@@ -758,3 +758,172 @@ footer {
 .popup.error .popup-content p {
     color: var(--kenya-red);
 }
+/* Design for the share tweet section*/
+.tweet-section {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 50px;
+  background: linear-gradient(135deg, var(--kenya-white) 0%, #f5f5f5 100%);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  position: relative;
+  z-index: 10;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.tweet-section h3 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: var(--kenya-red);
+  text-align: center;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.tweet-section h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(to right, var(--kenya-black), var(--kenya-red), var(--kenya-green));
+  border-radius: 2px;
+}
+
+.tweet-section .form-group {
+  margin-bottom: 20px;
+}
+
+.tweet-section .form-group label {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.tweet-section .form-group input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background: #fafafa;
+  transition: var(--transition);
+}
+
+.tweet-section .form-group input:focus {
+  outline: none;
+  border-color: var(--kenya-red);
+  box-shadow: 0 0 10px rgba(187, 0, 0, 0.2);
+}
+
+.tweet-section .form-group p {
+  font-size: 0.9rem;
+  color: #666;
+  text-align: left;
+  margin-top: 5px;
+}
+
+.tweet-section .error {
+  font-size: 1rem;
+  color: var(--kenya-red);
+  text-align: center;
+  margin-bottom: 20px;
+  display: none;
+}
+
+.tweet-section .action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 300px;
+  padding: 18px 45px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 60px;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: linear-gradient(45deg, var(--kenya-black) 0%, var(--kenya-red) 50%, var(--kenya-green) 100%);
+  margin: 0 auto;
+}
+
+.tweet-section .action-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, var(--kenya-black) 0%, var(--kenya-red) 50%, var(--kenya-green) 100%);
+  z-index: -1;
+  transition: var(--transition);
+  opacity: 1;
+}
+
+.tweet-section .action-btn:hover::before {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+.tweet-section .action-btn span {
+  position: relative;
+  z-index: 2;
+  color: var(--kenya-white);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.tweet-section .action-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .tweet-section {
+    padding: 30px 20px;
+  }
+
+  .tweet-section h3 {
+    font-size: 2rem;
+  }
+
+  .tweet-section .form-group input {
+    width: 100%;
+  }
+
+  .tweet-section .action-btn {
+    padding: 15px 30px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tweet-section h3 {
+    font-size: 1.8rem;
+  }
+
+  .tweet-section .form-group label {
+    font-size: 1rem;
+  }
+
+  .tweet-section .form-group input {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .tweet-section .action-btn {
+    padding: 12px 25px;
+    font-size: 0.9rem;
+  }
+}
