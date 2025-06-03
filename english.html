@@ -307,6 +307,68 @@
                     </button>
                 </div>
             </div>
+            <div class="tweet-section">
+  <h3>Share Your Experience</h3>
+  <form id="tweetForm">
+    <label for="taxInput">Which tax from above affects you the most?</label><br>
+    <input type="text" id="taxInput" placeholder="e.g., Income Tax, VAT" maxlength="50"><br>
+    <p id="taxCharCount">0/50 characters</p>
+
+    <label for="effectInput">How does this tax affect you?</label><br>
+    <input type="text" id="effectInput" placeholder="e.g., It reduces my disposable income" maxlength="180"><br>
+    <p id="effectCharCount">0/180 characters</p>
+
+    <p id="errorMsg" style="color: red; display: none;">Your input is too long!</p>
+    <button type="button" onclick="shareTweet()">Share on X</button>
+  </form>
+
+  <style>
+    .tweet-section { text-align: center; margin: 50px; font-family: Arial, sans-serif; }
+    label { display: block; margin: 10px 0 5px; font-weight: bold; }
+    input { width: 300px; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; }
+    button { padding: 10px 20px; cursor: pointer; background: #1DA1F2; color: white; border: none; border-radius: 5px; }
+    button:hover { background: #0d8bdc; }
+    p { font-size: 14px; color: #666; }
+  </style>
+
+  <script>
+    const maxTaxLength = 50; // Max length for tax input
+    const maxEffectLength = 180; // Max length for effect input
+    const taxInput = document.getElementById('taxInput');
+    const effectInput = document.getElementById('effectInput');
+    const taxCharCount = document.getElementById('taxCharCount');
+    const effectCharCount = document.getElementById('effectCharCount');
+    const errorMsg = document.getElementById('errorMsg');
+
+    // Update character counts
+    taxInput.addEventListener('input', () => {
+      taxCharCount.textContent = `${taxInput.value.length}/${maxTaxLength} characters`;
+    });
+
+    effectInput.addEventListener('input', () => {
+      effectCharCount.textContent = `${effectInput.value.length}/${maxEffectLength} characters`;
+    });
+
+    function shareTweet() {
+      const tax = taxInput.value.trim();
+      const effect = effectInput.value.trim();
+
+      if (!tax || !effect) {
+        alert('Please fill in both fields!');
+        return;
+      }
+
+      const tweetText = `The ${tax} tax affects me by ${effect}. #RejectFinanceBill2025`;
+      if (tweetText.length > 280) {
+        errorMsg.style.display = 'block';
+        return;
+      }
+
+      const encodedTweet = encodeURIComponent(tweetText);
+      window.open(`https://x.com/intent/tweet?text=${encodedTweet}`, '_blank');
+    }
+  </script>
+</div>
             
             <a href="index.html" class="back-btn">
                 <i class="fas fa-arrow-left"></i>
