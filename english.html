@@ -307,18 +307,18 @@
                     </button>
                 </div>
             </div>
-          <section class="tweet-section">
+       <section class="tweet-section">
   <h3>Share Your Experience</h3>
   <form id="tweetForm">
     <div class="form-group">
       <label for="taxInput">Which tax from above affects you the most?</label>
-      <input type="text" id="taxInput" placeholder="e.g., Income Tax, VAT" maxlength="50">
+      <input type="text" id="taxInput" maxlength="50">
       <p id="taxCharCount">0/50 characters</p>
     </div>
 
     <div class="form-group">
       <label for="effectInput">How does this tax affect you?</label>
-      <input type="text" id="effectInput" placeholder="e.g., It reduces my disposable income" maxlength="180">
+      <input type="text" id="effectInput" maxlength="180">
       <p id="effectCharCount">0/180 characters</p>
     </div>
 
@@ -352,7 +352,7 @@
         return;
       }
 
-      const tweetText = `The ${tax} tax affects me by ${effect}. #RejectFinanceBill2025`;
+      const tweetText = `${tax} ${effect} #RejectFinanceBill2025`;
       if (tweetText.length > 280) {
         errorMsg.style.display = 'block';
         return;
