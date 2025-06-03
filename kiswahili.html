@@ -307,6 +307,68 @@
                     </button>
                 </div>
             </div>
+            <div class="tweet-section">
+  <h3>Shiriki Uzoefu Wako</h3>
+  <form id="tweetForm">
+    <label for="taxInput">Kodi gani hapo juu inakuathiri zaidi?</label><br>
+    <input type="text" id="taxInput" placeholder="mf. Kodi ya Mapato, VAT" maxlength="50"><br>
+    <p id="taxCharCount">Herufi 0/50</p>
+
+    <label for="effectInput">Kodi hii inakuathiri vipi?</label><br>
+    <input type="text" id="effectInput" placeholder="mf. Inapunguza mapato yangu ya ziada" maxlength="180"><br>
+    <p id="effectCharCount">Herufi 0/180</p>
+
+    <p id="errorMsg" style="color: red; display: none;">Ujumbe wako ni mrefu sana!</p>
+    <button type="button" onclick="shareTweet()">Shiriki kwenye X</button>
+  </form>
+
+  <style>
+    .tweet-section { text-align: center; margin: 50px; font-family: Arial, sans-serif; }
+    label { display: block; margin: 10px 0 5px; font-weight: bold; }
+    input { width: 300px; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; }
+    button { padding: 10px 20px; cursor: pointer; background: #1DA1F2; color: white; border: none; border-radius: 5px; }
+    button:hover { background: #0d8bdc; }
+    p { font-size: 14px; color: #666; }
+  </style>
+
+  <script>
+    const maxTaxLength = 50; // Max length for tax input
+    const maxEffectLength = 180; // Max length for effect input
+    const taxInput = document.getElementById('taxInput');
+    const effectInput = document.getElementById('effectInput');
+    const taxCharCount = document.getElementById('taxCharCount');
+    const effectCharCount = document.getElementById('effectCharCount');
+    const errorMsg = document.getElementById('errorMsg');
+
+    // Update character counts
+    taxInput.addEventListener('input', () => {
+      taxCharCount.textContent = `Herufi ${taxInput.value.length}/${maxTaxLength}`;
+    });
+
+    effectInput.addEventListener('input', () => {
+      effectCharCount.textContent = `Herufi ${effectInput.value.length}/${maxEffectLength}`;
+    });
+
+    function shareTweet() {
+      const tax = taxInput.value.trim();
+      const effect = effectInput.value.trim();
+
+      if (!tax || !effect) {
+        alert('Tafadhali jaza sehemu zote mbili!');
+        return;
+      }
+
+      const tweetText = `Kodi ya ${tax} inanathiri kwa ${effect}. #RejectFinanceBill2025`;
+      if (tweetText.length > 280) {
+        errorMsg.style.display = 'block';
+        return;
+      }
+
+      const encodedTweet = encodeURIComponent(tweetText);
+      window.open(`https://x.com/intent/tweet?text=${encodedTweet}`, '_blank');
+    }
+  </script>
+</div>
             
             <a href="index.html" class="back-btn">
                 <i class="fas fa-arrow-left"></i>
