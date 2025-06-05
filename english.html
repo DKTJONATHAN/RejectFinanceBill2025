@@ -363,6 +363,185 @@
     }
   </script>
 </section>
+<section id="civic-education-faq">
+  <h2>Civic Education and FAQ</h2>
+  <p>
+    Understanding the Finance Bill is key to grasping how Kenya funds its government and drives economic growth. 
+    The Finance Bill 2025 proposes tax and policy changes to support a budget of KES 3.914 trillion, aiming to 
+    reduce public debt and fund essential services.
+  </p>
+  <button onclick="toggleContent()" id="learnMoreBtn">Learn More</button>
+  
+  <div id="financeBillDetails" style="display: none;">
+    <h3>What is a Finance Bill?</h3>
+    <p>
+      A Finance Bill is a legislative proposal introduced annually by the Kenyan government, typically through the 
+      National Treasury, to outline revenue-raising measures such as taxes, levies, and fees. It amends existing tax 
+      laws (e.g., Income Tax Act, Value Added Tax Act) to fund the national budget, pay off public debt, and support 
+      development projects like education, healthcare, and infrastructure.
+    </p>
+    
+    <h3>How is the Finance Bill Used?</h3>
+    <p>
+      The Finance Bill funds the government’s operations and priorities. It determines how much revenue will be collected 
+      through taxes (e.g., income tax, VAT, excise duties) and appropriations-in-aid, then allocates these funds to 
+      ministries, counties, and programs. For 2025, the bill targets KES 3.385 trillion in revenue to address a fiscal 
+      deficit of KES 703.9 billion, or 3.9% of GDP, balancing borrowing and spending on public services.
+    </p>
+    
+    <h3>How Does the Finance Bill Run the Kenyan Government?</h3>
+    <p>
+      The process starts with the National Treasury drafting the bill, guided by the Budget Policy Statement and public 
+      input. It’s presented to the National Assembly (e.g., on April 30, 2025, for the 2025 bill), undergoes public 
+      participation as required by Article 118 of the Constitution, and faces debate and amendments. Once passed and 
+      assented to by the President, it becomes the Finance Act, enabling the Kenya Revenue Authority (KRA) to collect 
+      taxes and the government to finance operations, from paying teachers to building roads.
+    </p>
+    
+    <h3>Examples from Previous Finance Bills</h3>
+    <ul>
+      <li><strong>Finance Bill 2023:</strong> Introduced a 3% housing levy on monthly salaries to fund affordable housing, 
+        raised VAT on petroleum products from 8% to 16%, and imposed a 3% tax on digital assets to boost revenue. These 
+        changes aimed to address financial inclusion and economic empowerment but sparked debate over cost of living.</li>
+      <li><strong>Finance Bill 2024:</strong> Proposed a 16% VAT on bread and a 2.5% motor vehicle tax, but public protests 
+        led to their removal. It aimed to raise KES 346 billion, but President Ruto rejected it on June 28, 2024, after 
+        unrest, opting for a KES 999 billion budget cut instead.</li>
+    </ul>
+  </div>
+  
+  <h3>Frequently Asked Questions (FAQs)</h3>
+  <div class="faq-container">
+    <div class="faq-item">
+      <button onclick="toggleAnswer(this)" class="faq-question">Why does the Finance Bill 2025 increase taxes?</button>
+      <div class="faq-answer" style="display: none;">
+        <p>
+          The Finance Bill 2025 aims to widen the tax base to collect KES 3.385 trillion in revenue to fund a KES 3.914 
+          trillion budget, reduce public debt (currently 68% of GDP), and limit borrowing. New taxes, like expanded VAT 
+          and a five-year cap on carrying forward tax losses, help close revenue gaps amid global trade challenges, such 
+          as U.S. tariffs affecting Kenyan exports.
+        </p>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <button onclick="toggleAnswer(this)" class="faq-question">How can I participate in the Finance Bill process?</button>
+      <div class="faq-answer" style="display: none;">
+        <p>
+          Public participation is mandated by the Constitution. The Finance and National Planning Committee calls for 
+          written and oral submissions after the bill is tabled (e.g., April 30, 2025, for the 2025 bill). Attend hearings, 
+          submit feedback via email or memoranda, or follow updates from the National Assembly or media like the Daily 
+          Nation to voice concerns before the July 1, 2025, effective date.
+        </p>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <button onclick="toggleAnswer(this)" class="faq-question">What happens if the Finance Bill isn’t passed?</button>
+      <div class="faq-answer" style="display: none;">
+        <p>
+          If the President doesn’t assent, as with the Finance Bill 2024, the government reverts to the previous Finance 
+          Act (e.g., 2023) for tax collection. This may lead to budget cuts (e.g., KES 999 billion in 2024), delaying 
+          projects like roads or healthcare, and increased borrowing to cover the deficit, impacting essential services.
+        </p>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <button onclick="toggleAnswer(this)" class="faq-question">Why are essential goods taxed in the 2025 bill?</button>
+      <div class="faq-answer" style="display: none;">
+        <p>
+          Proposals to shift essential goods from zero-rated to 16% VAT aim to boost revenue but have faced opposition for 
+          raising living costs. Stakeholders argue this burdens Kenyans, and public hearings (starting July 2, 2025, across 
+          ten counties) allow feedback to potentially revise such measures before finalization.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  #civic-education-faq {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  h2, h3 {
+    color: #2c3e50;
+  }
+  p {
+    line-height: 1.6;
+    color: #34495e;
+  }
+  #learnMoreBtn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+  }
+  #learnMoreBtn:hover {
+    background-color: #2980b9;
+  }
+  #financeBillDetails {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px 0;
+  }
+  .faq-container {
+    margin-top: 20px;
+  }
+  .faq-item {
+    margin: 10px 0;
+  }
+  .faq-question {
+    background-color: #ecf0f1;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  .faq-question:hover {
+    background-color: #dfe6e9;
+  }
+  .faq-answer {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+</style>
+
+<script>
+  function toggleContent() {
+    var content = document.getElementById("financeBillDetails");
+    var button = document.getElementById("learnMoreBtn");
+    if (content.style.display === "none") {
+      content.style.display = "block";
+      button.textContent = "Learn Less";
+    } else {
+      content.style.display = "none";
+      button.textContent = "Learn More";
+    }
+  }
+
+  function toggleAnswer(button) {
+    var answer = button.nextElementSibling;
+    if (answer.style.display === "none") {
+      answer.style.display = "block";
+    } else {
+      answer.style.display = "none";
+    }
+  }
+</script>
 </div>
             
             <a href="index.html" class="back-btn">
