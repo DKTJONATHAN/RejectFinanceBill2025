@@ -1,141 +1,4 @@
-/* style.css */
-/* Add these new styles at the beginning of your CSS, before the existing rules */
 
-/* HD Texture Overlay */
-body::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: 
-        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 800 800"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100%" height="100%" filter="url(%23noise)" opacity="0.05"/></svg>'),
-        linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9));
-    mix-blend-mode: overlay;
-    z-index: -1;
-    pointer-events: none;
-}
-
-/* Ultra Clear UI Enhancements */
-.container, 
-header, 
-.hero, 
-.description, 
-.content-section, 
-.report-section, 
-.tweet-section {
-    backdrop-filter: blur(0.5px);
-}
-
-/* Enhanced Shadows and Depth */
-:root {
-    --shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
-    --shadow-hover: 0 15px 50px rgba(0, 0, 0, 0.18);
-    --text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-}
-
-/* Sharp Borders with Subtle Inner Glow */
-.description, 
-.content-section, 
-.report-section, 
-.tweet-section,
-.popup-content {
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    box-shadow: 
-        var(--shadow),
-        inset 0 0 15px rgba(255, 255, 255, 0.5);
-}
-
-/* Metallic Accents */
-.btn::after, 
-.action-btn::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        135deg, 
-        rgba(255, 255, 255, 0.15) 0%, 
-        rgba(255, 255, 255, 0) 50%, 
-        rgba(255, 255, 255, 0.15) 100%
-    );
-    border-radius: inherit;
-    z-index: 1;
-}
-
-/* Ultra Clear Typography */
-body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-}
-
-.hero-title, 
-.hero-subtitle, 
-.logo-text {
-    text-shadow: 
-        0 2px 10px rgba(0, 0, 0, 0.3),
-        0 0 20px rgba(255, 215, 0, 0.2);
-}
-
-/* HD Gradient Enhancements */
-.hero::before {
-    background: linear-gradient(45deg, 
-        rgba(0, 0, 0, 0.85) 0%, 
-        rgba(187, 0, 0, 0.75) 50%, 
-        rgba(0, 102, 0, 0.85) 100%);
-}
-
-/* Micro-Interactions */
-.btn:hover, 
-.action-btn:hover, 
-.back-btn:hover, 
-.logo:hover, 
-.footer-logo:hover {
-    transform: translateY(-2px) scale(1.02);
-    transition: var(--transition), transform 0.2s ease;
-}
-
-/* Ultra Sharp Focus States */
-input:focus, 
-textarea:focus, 
-button:focus {
-    outline: 2px solid var(--kenya-red);
-    outline-offset: 2px;
-    box-shadow: 
-        0 0 0 4px rgba(187, 0, 0, 0.2),
-        var(--shadow);
-}
-
-/* HD Separators */
-.content-section h2::after, 
-.report-section h2::after, 
-.tweet-section h3::after {
-    height: 3px;
-    background: linear-gradient(
-        90deg, 
-        var(--kenya-black) 0%, 
-        var(--kenya-red) 50%, 
-        var(--kenya-green) 100%
-    );
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Crystal Clear Form Elements */
-.form-group input, 
-.form-group textarea {
-    background: rgba(255, 255, 255, 0.9);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 
-        inset 0 1px 3px rgba(0, 0, 0, 0.05),
-        0 1px 0 rgba(255, 255, 255, 0.8);
-}
-
-/* Keep all your existing CSS below this point */
-/* ... rest of your existing CSS ... */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 :root {
@@ -625,48 +488,48 @@ footer {
         flex-direction: column;
         gap: 20px;
     }
-    
+
     .hero {
         padding: 80px 20px 60px;
     }
-    
+
     .hero-title {
         font-size: 2.8rem;
     }
-    
+
     .hero-subtitle {
         font-size: 1.4rem;
     }
-    
+
     .description {
         padding: 30px 20px;
         margin-top: -30px;
     }
-    
+
     .language-buttons {
         flex-direction: column;
         gap: 25px;
     }
-    
+
     .btn {
         width: 100%;
         max-width: 350px;
         padding: 18px;
     }
-    
+
     .content-section {
         padding: 30px;
     }
-    
+
     .content-section h2 {
         font-size: 2rem;
     }
-    
+
     .action-buttons {
         flex-direction: column;
         gap: 20px;
     }
-    
+
     .action-btn {
         width: 100%;
         justify-content: center;
@@ -677,20 +540,20 @@ footer {
     .hero-title {
         font-size: 2.2rem;
     }
-    
+
     .hero-subtitle {
         font-size: 1.2rem;
     }
-    
+
     .logo-text {
         font-size: 1.5rem;
     }
-    
+
     .logo {
         width: 60px;
         height: 60px;
     }
-    
+
     .logo img {
         width: 70%;
         height: auto;
